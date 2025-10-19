@@ -29,7 +29,7 @@
                     <div class="card-body">
 
                         <h3 class="text-center m-0">
-                            <a href="index.html" class="logo logo-admin"><img src="assets/images/logo-sm.png"
+                            <a href="index" class="logo logo-admin"><img src="assets/images/logo-sm.png"
                                     height="60" alt="logo" class="my-3"></a>
                         </h3>
 

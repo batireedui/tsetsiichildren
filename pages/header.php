@@ -13,7 +13,7 @@ $columnNumber = 3;
         <div class="app-brand demo">
           <a href="/" class="app-brand-link">
             <span class="app-brand-logo demo">
-              <img src="/assets/img/icons/logo.jpg" width="50px" />
+              <img src="/assets/img/icons/logo.png" width="50px" />
             </span>
             <span class="app-brand-text demo menu-text fw-bold ms-2">Нэгдсэн судалгаа</span>
           </a>
