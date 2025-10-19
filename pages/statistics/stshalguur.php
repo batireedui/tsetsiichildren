@@ -39,7 +39,7 @@ $no_too = $no_too - $yes_too;
                 <!-- Default Modal -->
                 <div class="col-lg-6 col-sm-12">
                     <div class="col-sm-6:eq(0)"></div>
-                    <h4 class="fw-bold py-3 mb-4">Сургууль</h4>
+                    <h4 class="fw-bold py-3 mb-4">Байгууллага</h4>
                 </div>
                 <div class="col-lg-6 col-sm-12" style="text-align: end">
                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addNew">
@@ -60,7 +60,7 @@ $no_too = $no_too - $yes_too;
                     <thead class="table-light">
                         <tr>
                             <th>#</th>
-                            <th>Сургуулийн нэр</th>
+                            <th>Байгууллагын нэр</th>
                             <th>Судалгаанд хамрагдаагүй</th>
                             <th>Судалгаанд хамрагдсан</th>
                             <th>Хувь</th>

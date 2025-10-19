@@ -77,7 +77,7 @@ $check = array_search($student_id, $students);
                     <!-- Default Modal -->
                     <div class="col-lg-6 col-sm-12">
                         <div class="col-sm-6:eq(0)"></div>
-                        <h4 class="fw-bold py-3 mb-4">Сургууль <?= $check ?></h4>
+                        <h4 class="fw-bold py-3 mb-4">Байгууллага <?= $check ?></h4>
                     </div>
                 </div>
                 <div class="row gy-3">

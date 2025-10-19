@@ -35,7 +35,7 @@ _selectNoParam(
                 <!-- Default Modal -->
                 <div class="col-lg-6 col-sm-12">
                     <div class="col-sm-6:eq(0)"></div>
-                    <h4 class="fw-bold py-3 mb-4">Сургууль</h4>
+                    <h4 class="fw-bold py-3 mb-4">Байгууллага</h4>
                 </div>
             </div>
             <div class="row">

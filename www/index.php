@@ -16,7 +16,7 @@ $teacher_page = array("/", "");
 
 $page = @$_SERVER['REDIRECT_URL'];
 
-$systemName = "Гэр айлчлал";
+$systemName = "Нэгдсэн судалгаа";
 $pageTitle = "Өмнөговь аймгийн Цогтцэций сум";
 $favi = "/assets/img/favicon/logo.png";
 //echo $script;

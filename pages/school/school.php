@@ -35,11 +35,11 @@ $columnNumber = 6;
                 <!-- Default Modal -->
                 <div class="col-lg-6 col-sm-12">
                     <div class="col-sm-6:eq(0)"></div>
-                    <h4 class="fw-bold py-3 mb-4">Сургуулийн бүртгэл (<?= $count ?>)</h4>
+                    <h4 class="fw-bold py-3 mb-4">Байгууллагын бүртгэл (<?= $count ?>)</h4>
                 </div>
                 <div class="col-lg-6 col-sm-12" style="text-align: end">
                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addNew">
-                        Сургууль бүртгэх
+                        Байгууллага бүртгэх
                     </button>
                 </div>
             </div>
@@ -48,7 +48,7 @@ $columnNumber = 6;
                     <thead class="table-light">
                         <tr>
                             <th>#</th>
-                            <th>Сургуулийн нэр</th>
+                            <th>Байгууллагын нэр</th>
                             <th>Сум</th>
                             <th>Захирал</th>
                             <th>Утас</th>
@@ -96,13 +96,13 @@ $columnNumber = 6;
                         <form action="/record/action" id="addForm" method="POST">
                             <div class="row">
                                 <div class="col mb-3">
-                                    <label class="form-label">Сургуулийн нэр</label>
+                                    <label class="form-label">Байгууллагын нэр</label>
                                     <input type="text" class="form-control" id="school_name" name="school_name" required>
                                 </div>
                             </div>
                             <div class="row g-2">
                                 <div class="col mb-0">
-                                    <label class="form-label">Сум</label>
+                                    <label class="form-label">Баг</label>
                                     <select class="form-control" id="sum" name="sum">
                                         <?php foreach ($sumd as $nsum) : ?>
                                             <option><?= $nsum ?></option>
@@ -133,14 +133,14 @@ $columnNumber = 6;
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="modalCenterTitle">Сургуулийн бүртгэх</h5>
+                        <h5 class="modal-title" id="modalCenterTitle">Байгууллагын бүртгэх</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <form action="/record/action" id="editForm" method="POST">
                             <div class="row">
                                 <div class="col mb-3">
-                                    <label class="form-label">Сургуулийн нэр</label>
+                                    <label class="form-label">Байгууллагын нэр</label>
                                     <input type="text" class="form-control" id="eschool_name" name="eschool_name" required>
                                     <input type="text" style="display: none" id="eschool_id" name="eschool_id" required>
                                 </div>

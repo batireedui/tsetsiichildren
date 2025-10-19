@@ -135,9 +135,9 @@ require ROOT . "/pages/header.php";
                                     </select>
                                 </div>
                                 <div class="col-md-3">
-                                    <label class="form-label">Сургуулийн нэр</label>
+                                    <label class="form-label">Байгууллагын нэр</label>
                                     <select class="form-control" id="eschool" name="eschool" onchange="onSchool('edit')">
-                                        <option>Сургууль сонгоно уу</option>
+                                        <option>Байгууллага сонгоно уу</option>
                                         <?php foreach ($school_list as $sch) : ?>
                                             <option value="<?= $sch[0] ?>"><?= $sch[1] ?> (<?= $sch[2] ?>)</option>
                                         <?php endforeach ?>

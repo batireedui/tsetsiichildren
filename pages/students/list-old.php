@@ -63,7 +63,7 @@ $columnNumber = 9;
                             <th>РД</th>
                             <th>Утас</th>
                             <th>Хүйс</th>
-                            <th>Сургууль</th>
+                            <th>Байгууллага</th>
                             <th>Анги</th>
                             <th>Бүлэг</th>
                             <th></th>
@@ -167,7 +167,7 @@ $columnNumber = 9;
                                     </select>
                                 </div>
                                 <div class="col-md-3">
-                                    <label class="form-label">Сургуулийн нэр</label>
+                                    <label class="form-label">Байгууллагын нэр</label>
                                     <select class="form-control" id="school" name="school" onchange="onSchool('add')">
                                         <?php foreach ($school_list as $sch) : ?>
                                             <option value="<?= $sch[0] ?>"><?= $sch[1] ?> (<?= $sch[2] ?>)</option>
@@ -196,7 +196,7 @@ $columnNumber = 9;
             <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="modalCenterTitle">Сургуулийн бүртгэх</h5>
+                        <h5 class="modal-title" id="modalCenterTitle">Байгууллагын бүртгэх</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
@@ -257,7 +257,7 @@ $columnNumber = 9;
                                     </select>
                                 </div>
                                 <div class="col-md-3">
-                                    <label class="form-label">Сургуулийн нэр</label>
+                                    <label class="form-label">Байгууллагын нэр</label>
                                     <select class="form-control" id="eschool" name="eschool" onchange="onSchool('edit')">
                                         <?php foreach ($school_list as $sch) : ?>
                                             <option value="<?= $sch[0] ?>"><?= $sch[1] ?> (<?= $sch[2] ?>)</option>

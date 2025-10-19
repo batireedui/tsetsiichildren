@@ -15,7 +15,7 @@ $columnNumber = 3;
             <span class="app-brand-logo demo">
               <img src="/assets/img/icons/logo.jpg" width="50px" />
             </span>
-            <span class="app-brand-text demo menu-text fw-bold ms-2">Гэр айлчлал</span>
+            <span class="app-brand-text demo menu-text fw-bold ms-2">Нэгдсэн судалгаа</span>
           </a>
 
           <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
@@ -60,7 +60,7 @@ $columnNumber = 3;
               <?php if ($user_role == "admin" || $user_role == "najiltan") { ?>
                 <li class="menu-item <?php echo strpos($page, "/statistics/stschool") > -1 ? 'active' : '' ?>">
                   <a href="/statistics/stschool" class="menu-link">
-                    <div data-i18n="Without menu">Сургууль</div>
+                    <div data-i18n="Without menu">Байгууллага</div>
                   </a>
                 </li>
                 <!--
@@ -105,7 +105,7 @@ $columnNumber = 3;
             echo '">
               <a href="/school/school" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-buildings"></i>
-                <div data-i18n="Account Settings">Сургууль</div>
+                <div data-i18n="Account Settings">Байгууллага</div>
               </a>
             </li>';
           }
@@ -153,7 +153,7 @@ $columnNumber = 3;
                 echo strpos($page, "/students/not-school") > -1 ? 'active open' : "";
                 echo '">
                   <a href="/students/not-school" class="menu-link">
-                    <div data-i18n="Without menu">Сургуульгүй</div>
+                    <div data-i18n="Without menu">Байгууллагагүй</div>
                   </a>
                 </li>';
               }

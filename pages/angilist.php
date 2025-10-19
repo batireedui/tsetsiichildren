@@ -67,7 +67,7 @@ $columnNumber = 5;
                     <thead class="table-light">
                         <tr>
                             <th>#</th>
-                            <th>Сургууль</th>
+                            <th>Байгууллага</th>
                             <th>Ангийн багш</th>
                             <th>Анги</th>
                             <th>Бүлэг</th>
@@ -117,9 +117,9 @@ $columnNumber = 5;
                         <form action="/record/action" id="addForm" method="POST">
                             <div class="row">
                                 <div class="col mb-3">
-                                    <label class="form-label">Сургууль</label>
+                                    <label class="form-label">Байгууллага</label>
                                     <select class="select2 form-select form-select-lg" data-allow-clear="true" id="school" name="school" onchange="onSchool('add')" required>
-                                        <option value="">Сургууль сонгоно уу</option>
+                                        <option value="">Байгууллага сонгоно уу</option>
                                         <?php foreach ($school_list as $nschool) : ?>
                                             <option value="<?= $nschool[0] ?>"><?= $nschool[1] ?> (<?= $nschool[2] ?>)</option>
                                         <?php endforeach ?>
@@ -168,9 +168,9 @@ $columnNumber = 5;
                         <form action="/record/action" method="POST">
                             <div class="row">
                                 <div class="col mb-3">
-                                    <label class="form-label">Сургууль</label>
+                                    <label class="form-label">Байгууллага</label>
                                     <select class="form-control" id="eschool" name="eschool" onchange="onSchool('edit')" required>
-                                        <option value="">Сургууль сонгоно уу</option>
+                                        <option value="">Байгууллага сонгоно уу</option>
                                         <?php foreach ($school_list as $nschool) : ?>
                                             <option value="<?= $nschool[0] ?>"><?= $nschool[1] ?> (<?= $nschool[2] ?>)</option>
                                         <?php endforeach ?>
@@ -291,14 +291,14 @@ $columnNumber = 5;
             };
 
             function deletesc(id) {
-                let school_name = $('#f1-' + id).text() + " сургуулийн " + $('#f3-' + id).text() + $('#f4-' + id).text();
+                let school_name = $('#f1-' + id).text() + " байгууллагын " + $('#f3-' + id).text() + $('#f4-' + id).text();
                 $('#deletemodal').modal('show');
                 $("#dschoolinfo").html('"' + school_name + '" анги устгах уу?');
                 $("#dangi_id").val(id);
             }
 
             function graduation(id) {
-                let school_name = $('#f1-' + id).text() + " сургуулийн " + $('#f3-' + id).text() + $('#f4-' + id).text();
+                let school_name = $('#f1-' + id).text() + " байгууллагын " + $('#f3-' + id).text() + $('#f4-' + id).text();
                 $('#gmodal').modal('show');
                 $("#gschoolinfo").html('"' + school_name + '" ангийг төгсөлтөөр бүртгэх үү? Тус ангийн бүх сурагч төгсөгчөөр бүртгэгдэх болно!');
                 $("#gangi_id").val(id);

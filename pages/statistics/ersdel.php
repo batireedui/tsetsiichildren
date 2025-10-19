@@ -76,7 +76,7 @@ require ROOT . "/pages/header.php";
                             <th>РД</th>
                             <th>Утас</th>
                             <th>Хүйс</th>
-                            <th>Сургууль</th>
+                            <th>Байгууллага</th>
                             <th>Анги</th>
                             <th>Бүлэг</th>
                             <th>Судалгаа</th>
@@ -90,7 +90,7 @@ require ROOT . "/pages/header.php";
                             <th>РД</th>
                             <th>Утас</th>
                             <th>Хүйс</th>
-                            <th>Сургууль</th>
+                            <th>Байгууллага</th>
                             <th>Анги</th>
                             <th>Бүлэг</th>
                              <th>Судалгаа</th>

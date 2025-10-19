@@ -82,7 +82,7 @@ require("header.php");
                     <strong>Хичээлийн жил: <?= $h_jil ?></strong><br>
                     <?php
                     if (isset($school_name)) {
-                      echo "Сургууль: " .  $school_name . "<br>";
+                      echo "Байгууллага: " .  $school_name . "<br>";
                     } else {
                       echo "Хэрэглэгчийн төрөл:  <br>";
                     }
@@ -118,7 +118,7 @@ require("header.php");
                     <div class="d-flex align-items-end mt-2">
                       <h1 class="mb-0 me-2"><?= $school_too ?></h1>
                     </div>
-                    <small>сургуулийн бүртгэл</small>
+                    <small>байгууллагын бүртгэл</small>
                   </div>
                   <span class="badge bg-label-danger rounded p-2">
                     <i class="bx bxs-school bx-lg"></i>

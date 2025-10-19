@@ -97,7 +97,7 @@ $columnNumber = 7;
                             <th>Хүйс</th>
                             <th>Анги</th>
                             <th>Бүлэг</th>
-                            <th>Сургууль</th>
+                            <th>Байгууллага</th>
                         </tr>
                     </thead>
                     <tbody class="table-border-bottom-0">

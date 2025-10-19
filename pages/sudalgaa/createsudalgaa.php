@@ -35,7 +35,7 @@ $columnNumber = 9;
                             <th>Нэр</th>
                             <th>РД</th>
                             <th>Хүйс</th>
-                            <th>Сургууль</th>
+                            <th>Байгууллага</th>
                             <th>Анги</th>
                             <th></th>
                         </tr>
@@ -47,7 +47,7 @@ $columnNumber = 9;
                             <th>Нэр</th>
                             <th>РД</th>
                             <th>Хүйс</th>
-                            <th>Сургууль</th>
+                            <th>Байгууллага</th>
                             <th>Анги</th>
                             <th></th>
                         </tr>

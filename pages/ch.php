@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Гэр айлчлал</title>
+    <title>Нэгдсэн судалгаа</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <style>
         body,
@@ -26,7 +26,7 @@
             <div class="col-12" style="text-align: center;">
                 <img src="/assets/img/favicon/logo.png" width="200px" />
                 <div>
-                    <h3 style="color: #0739a9; margin-top: 20px">Гэр айлчлал</h3>
+                    <h3 style="color: #0739a9; margin-top: 20px">Нэгдсэн судалгаа</h3>
                     <p style="color: #0739a9;"><?=$pageTitle?></p>
                 </div>
             </div>
@@ -56,7 +56,7 @@
                         <a href="/adminpanel/login">
                             <div class="item">
                                 <img src="/assets/img/home/university.png" width="150px" />
-                                <div>Боловсролын газар</div>
+                                <div>ЗДТГ</div>
                             </div>
                         </a>
                     </div>

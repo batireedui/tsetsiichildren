@@ -7,7 +7,7 @@
 
     <title><?= $pageTitle ?> </title>
     <link rel="icon" type="image/x-icon" href="<?= $favi ?>" />
-    <meta name="description" content="Цогтцэций сум Боловсрол, шинжлэх ухааны газар, Гэр айлчлал" />
+    <meta name="description" content="Цогтцэций сум Боловсрол, шинжлэх ухааны газар, Нэгдсэн судалгаа" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -54,7 +54,7 @@
                             </a>
                         </div>
                         <!-- /Logo -->
-                        <h4 class="mb-2">Сургуулийн эрх 👋</h4>
+                        <h4 class="mb-2">Байгууллагын эрх 👋</h4>
                         <p class="mb-4">Өөрийн эрхээр нэвтрэн орно уу!</p>
 
                         <form id="formAuthentication" class="mb-3" action="/sign-in-do" method="POST">

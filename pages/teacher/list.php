@@ -70,7 +70,7 @@ $columnNumber = 9;
                             <th>Email</th>
                             <th>Утас</th>
                             <th>РД</th>
-                            <th>Сургууль</th>
+                            <th>Байгууллага</th>
                             <th>Төлөв</th>
                             <th></th>
                         </tr>
@@ -128,7 +128,7 @@ $columnNumber = 9;
                             </div>
                             <div class="row">
                                 <div class="col mb-3">
-                                    <label class="form-label">Сургууль:</label>
+                                    <label class="form-label">Байгууллага:</label>
                                     <select class="form-control" id="school" name="school">
                                         <?php foreach ($school_list as $sch) : ?>
                                             <option value="<?= $sch[0] ?>"><?= $sch[1] ?> (<?= $sch[2] ?>)</option>
@@ -208,7 +208,7 @@ $columnNumber = 9;
                             </div>
                             <div class="row">
                                 <div class="col mb-3">
-                                    <label class="form-label">Сургууль:</label>
+                                    <label class="form-label">Байгууллага:</label>
                                     <select class="form-control" id="eschool" name="eschool">
                                         <?php foreach ($school_list as $sch) : ?>
                                             <option value="<?= $sch[0] ?>"><?= $sch[1] ?> (<?= $sch[2] ?>)</option>

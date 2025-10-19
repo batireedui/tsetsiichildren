@@ -24,7 +24,7 @@ else
             _exec("UPDATE $role SET pass = ? WHERE id = ?", "si", [$newpass, $id], $count);
             
             $headers = "From: recovery@teachervisit.mn";
-            $ss = mail($user_email, 'Гэр айлчлал-Нууц үг сэргээх үйлдэл', 'teachervisit.mn сайтад нэвтрэх нууц үг сэргээх үйлдэл хийгдэж байна.', $headers);
+            $ss = mail($user_email, 'Нэгдсэн судалгаа-Нууц үг сэргээх үйлдэл', 'teachervisit.mn сайтад нэвтрэх нууц үг сэргээх үйлдэл хийгдэж байна.', $headers);
         
             $to = $email;
             $from = 'recovery@teachervisit.mn';

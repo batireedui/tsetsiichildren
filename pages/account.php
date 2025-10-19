@@ -92,7 +92,7 @@ require("header.php");
                                     <span><?= $email ?></span>
                                 </li>
                                 <li class="mb-3">
-                                    <span class="fw-bold me-2">Сургууль:</span>
+                                    <span class="fw-bold me-2">Байгууллага:</span>
                                     <span><?= $school ?></span>
                                 </li>
                             </ul>

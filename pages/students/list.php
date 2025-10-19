@@ -50,7 +50,7 @@ require ROOT . "/pages/header.php";
                             <th>РД</th>
                             <th>Утас</th>
                             <th>Хүйс</th>
-                            <th>Сургууль</th>
+                            <th>Байгууллага</th>
                             <th>Анги</th>
                             <th>Бүлэг</th>
                             <th>Эцэг/эх асран/х</th>
@@ -65,7 +65,7 @@ require ROOT . "/pages/header.php";
                             <th>РД</th>
                             <th>Утас</th>
                             <th>Хүйс</th>
-                            <th>Сургууль</th>
+                            <th>Байгууллага</th>
                             <th>Анги</th>
                             <th>Бүлэг</th>
                              <th>Эцэг/эх асран/х</th>
@@ -251,9 +251,9 @@ require ROOT . "/pages/header.php";
                                     </select>
                                 </div>
                                 <div class="col-md-3">
-                                    <label class="form-label">Сургуулийн нэр</label>
+                                    <label class="form-label">Байгууллагын нэр</label>
                                     <select class="form-control" id="school" name="school" onchange="onSchool('add')">
-                                        <option value="0">Сургууль сонгоно уу</option>
+                                        <option value="0">Байгууллага сонгоно уу</option>
                                         <?php foreach ($school_list as $sch) : ?>
                                             <option value="<?= $sch[0] ?>"><?= $sch[1] ?> (<?= $sch[2] ?>)</option>
                                         <?php endforeach ?>
@@ -350,9 +350,9 @@ require ROOT . "/pages/header.php";
                                     </select>
                                 </div>
                                 <div class="col-md-3">
-                                    <label class="form-label">Сургуулийн нэр</label>
+                                    <label class="form-label">Байгууллагын нэр</label>
                                     <select class="form-control" id="eschool" name="eschool" onchange="onSchool('edit')">
-                                        <option value="0">Сургууль сонгоно уу</option>
+                                        <option value="0">Байгууллага сонгоно уу</option>
                                         <?php foreach ($school_list as $sch) : ?>
                                             <option value="<?= $sch[0] ?>"><?= $sch[1] ?> (<?= $sch[2] ?>)</option>
                                         <?php endforeach ?>
@@ -899,7 +899,7 @@ require ROOT . "/pages/header.php";
               let av = $("#eclass").val();
               console.log(sv);
               if (sv == "0") {
-                alert("Сургууль сонгоно уу!");
+                alert("Байгууллага сонгоно уу!");
                 return false;
               }
               else if (av == "0") {
@@ -914,7 +914,7 @@ require ROOT . "/pages/header.php";
               let s = $("#school").val();
               let a = $("#class").val();
               if (s == "0") {
-                alert("Сургууль сонгоно уу!");
+                alert("Байгууллага сонгоно уу!");
                 return false;
               }
               else if (a == "0") {

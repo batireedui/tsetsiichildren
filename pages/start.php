@@ -49,7 +49,7 @@ while (_fetch($sstmt)) {
 
   <title><?= $pageTitle ?> </title>
   <link rel="icon" type="image/x-icon" href="<?= $favi ?>" />
-  <meta name="description" content='Цогтцэций сум Боловсрол, шинжлэх ухааны газар, Гэр айлчлал' />
+  <meta name="description" content='Цогтцэций сум Боловсрол, шинжлэх ухааны газар, Нэгдсэн судалгаа' />
 
   <!-- Favicon -->
 

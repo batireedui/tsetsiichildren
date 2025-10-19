@@ -7,7 +7,7 @@
 
     <title><?= $pageTitle ?> </title>
     <link rel="icon" type="image/x-icon" href="<?= $favi ?>" />
-    <meta name="description" content="Цогтцэций сум Боловсрол, шинжлэх ухааны газар, Гэр айлчлал" />
+    <meta name="description" content="Цогтцэций сум Боловсрол, шинжлэх ухааны газар, Нэгдсэн судалгаа" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
