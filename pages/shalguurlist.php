@@ -5,7 +5,7 @@ require "header.php";
 _selectNoParam(
     $stmt,
     $count,
-    "SELECT id, name FROM shalguurbuleg",
+    "SELECT id, name FROM shalguurbuleg ORDER BY id ASC",
     $id,
     $name
 );
@@ -70,7 +70,7 @@ $sh_too = 0;
                                 _select(
                                     $sstmt,
                                     $scount,
-                                    "SELECT id, name, ded, turul, hariulttype, tuluv FROM shalguurs WHERE buleg_id=?",
+                                    "SELECT id, name, ded, turul, hariulttype, tuluv FROM shalguurs WHERE buleg_id=? ORDER BY id ASC",
                                     "i",
                                     [$buleg[0]],
                                     $sid,

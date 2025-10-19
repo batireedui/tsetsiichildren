@@ -69,7 +69,7 @@ if (isset($_POST['schooladd'])) {
             [$id],
             $count
         );
-         $_SESSION['messages'] = ["Амжилттай устгагдлаа."];
+        $_SESSION['messages'] = ["Амжилттай устгагдлаа."];
     } catch (Exception $e) {
         $_SESSION['errors'] = ["Системийн алдаа гарлаа. Та дараа дахин оролдоно уу"];
         // echo "Алдаа: " . $e->getMessage() . ' : ' . $e->getFile() . ' : ' . $e->getLine() . ' : Code ' . $e->getCode();
@@ -89,7 +89,7 @@ if (isset($_POST['schooladd'])) {
     $school = post('school', 10);
     $pass = post('pass', 300);
     $mergejil = post('mergejil', 500);
-    $jil= post('jil', 10);
+    $jil = post('jil', 10);
 
     $stoo = 0;
     $emailtoo = 0;
@@ -101,13 +101,11 @@ if (isset($_POST['schooladd'])) {
         "SELECT count(id) FROM teachers WHERE email = '$email'",
         $emailtoo
     );
-    if($stoo > 0){
+    if ($stoo > 0) {
         $_SESSION['messages'] = ["Өөр сургуульд бүртгэлтэй байна."];
-    }
-    else if($emailtoo > 0){
+    } else if ($emailtoo > 0) {
         $_SESSION['messages'] = ["Email хаяг бүртгэлтэй байна."];
-    }
-    else {
+    } else {
         try {
             $success = _exec(
                 "INSERT INTO teachers(fname, lname, gender, email, phone, rd, school_id, pass, tuluv, updated_at, mergejil, jil) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
@@ -118,12 +116,12 @@ if (isset($_POST['schooladd'])) {
             $_SESSION['messages'] = ["Амжилттай бүртгэгдлээ."];
         } catch (Exception $e) {
             $_SESSION['errors'] = ["Системийн алдаа гарлаа. Та дараа дахин оролдоно уу"];
-             //echo "Алдаа: " . $e->getMessage() . ' : ' . $e->getFile() . ' : ' . $e->getLine() . ' : Code ' . $e->getCode();
+            //echo "Алдаа: " . $e->getMessage() . ' : ' . $e->getFile() . ' : ' . $e->getLine() . ' : Code ' . $e->getCode();
         } finally {
             if (isset($e)) {
                 logError($e);
             }
-    }
+        }
     }
     redirect("/teacher/list");
 } else if (isset($_POST['teacheredit'])) {
@@ -194,7 +192,7 @@ if (isset($_POST['schooladd'])) {
         $_SESSION['messages'] = ["Мэдээлэл бүртгэгдлээ."];
     } catch (Exception $e) {
         $_SESSION['errors'] = ["Системийн алдаа гарлаа. Та дараа дахин оролдоно уу"];
-         echo "Алдаа: " . $e->getMessage() . ' : ' . $e->getFile() . ' : ' . $e->getLine() . ' : Code ' . $e->getCode();
+        echo "Алдаа: " . $e->getMessage() . ' : ' . $e->getFile() . ' : ' . $e->getLine() . ' : Code ' . $e->getCode();
     } finally {
         if (isset($e)) {
             logError($e);
@@ -279,10 +277,9 @@ if (isset($_POST['schooladd'])) {
         "SELECT count(id) FROM students WHERE angi_id = '$id'",
         $stoo
     );
-    if($stoo > 0){
+    if ($stoo > 0) {
         $_SESSION['messages'] = ["Ангид сурагч бүртгэлтэй байна. Иймд утсгах боломжгүй."];
-    }
-    else{
+    } else {
         try {
             $success = _exec(
                 "DELETE FROM angis WHERE id=?",
@@ -307,10 +304,9 @@ if (isset($_POST['schooladd'])) {
         "SELECT count(student_id) FROM sudalgaas WHERE student_id = '$id'",
         $stoo
     );
-    if($stoo > 0){
+    if ($stoo > 0) {
         $_SESSION['messages'] = ["Сурагч судалгаанд хамрагдсан тул устгах боомжгүй байна."];
-    }
-    else {
+    } else {
         try {
             $success = _exec(
                 "DELETE FROM students WHERE id=?",
@@ -336,10 +332,10 @@ if (isset($_POST['schooladd'])) {
     $rd = post('rd', 300);
     $school_id = post('school', 300);
     $angi_id = post('class', 300);
-    
+
     $hayg = post('hayg', 300);
     $ohayg = post('ohayg', 300);
-    $club= post('club', 300);
+    $club = post('club', 300);
     $hentei = post('hentei', 300);
     $dsects = post('dsects', 300);
 
@@ -369,13 +365,13 @@ if (isset($_POST['schooladd'])) {
     $school_id = post('eschool', 10);
     $angi_id = post('eclass', 10);
     $edit_id = post('edit_id', 10);
-    
+
     $hayg = post('ehayg', 300);
     $ohayg = post('eohayg', 300);
-    $club= post('eclub', 300);
+    $club = post('eclub', 300);
     $hentei = post('ehentei', 300);
     $dsects = post('edsects', 300);
-    
+
     try {
         $success = _exec(
             "UPDATE students SET fname=?, lname=?, gender=?, phone=?, rd=?, school_id=?, angi_id=?, created_at=?, hayg=?, ohayg=?, hentei=?, dsects=?, club=?, tuluv=? WHERE id = ?",
@@ -452,16 +448,16 @@ if (isset($_POST['schooladd'])) {
     $buleg = $_POST['buleg'];
     $shner = $_POST['shner'];
     $hariult = $_POST['hariult'];
-    $expand = 0;
-    $tuluv = 0;
-    $dedturul = 0;
-    if ($_POST['expand'] == "on") {
+    $expand = $_POST['expand'] ?? 0;
+    $tuluv = $_POST['tuluv'] ?? 0;
+    $dedturul = $_POST['dedturul'] ?? 0;
+    if ($expand == "on") {
         $expand = 1;
     }
-    if ($_POST['tuluv'] == "on") {
+    if ($tuluv == "on") {
         $tuluv = 1;
     }
-    if (isset($_POST['dedturul']) == "on") {
+    if ($dedturul == "on") {
         $dedturul = 1;
     }
     try {
@@ -471,7 +467,7 @@ if (isset($_POST['schooladd'])) {
             [$buleg, $shner, $expand, $hariult, $tuluv, ognoo(), ognoo(), $dedturul],
             $count
         );
-        $_SESSION['action'] = "Бүлэг устгагдлаа!";
+        $_SESSION['action'] = "Шалгуур үзүүлэлт нэмэгдлээ!";
     } catch (Exception $e) {
         $_SESSION['errors'] = ["Системийн алдаа гарлаа. Та дараа дахин оролдоно уу"];
         // echo "Алдаа: " . $e->getMessage() . ' : ' . $e->getFile() . ' : ' . $e->getLine() . ' : Code ' . $e->getCode();
@@ -506,23 +502,37 @@ if (isset($_POST['schooladd'])) {
     );
     redirect("/shalguurlist");
 } else if (isset($_POST['shalguurdelete'])) {
-    /*$dbuleg_id = post('dangi_id', 300);
-    try {
-        $success = _exec(
-            "DELETE FROM shalguurs WHERE id=?",
-            'i',
-            [$dbuleg_id],
-            $count
-        );
-        $_SESSION['action'] = "Бүлэг устгагдлаа!";
-    } catch (Exception $e) {
-        $_SESSION['errors'] = ["Системийн алдаа гарлаа. Та дараа дахин оролдоно уу"];
-        // echo "Алдаа: " . $e->getMessage() . ' : ' . $e->getFile() . ' : ' . $e->getLine() . ' : Code ' . $e->getCode();
-    } finally {
-        if (isset($e)) {
-            logError($e);
+    $dbuleg_id = post('dangi_id', 300);
+    _selectRowNoParam("SELECT COUNT(id) FROM `sudalgaas` WHERE shalguur_id = '$dbuleg_id'", $stoo);
+    if ($stoo > 0) {
+        $_SESSION['action'] = ["Шалгуурт судалгааны мэдээлэл холбогдсон тул устгах боломжгүй. Төлөв идэвхгүй болгож солих боломжтой"];
+        redirect("/shalguurlist");
+        exit();
+    } else {
+
+        try {
+            $success = _exec(
+                "DELETE FROM shalguurs WHERE id=?",
+                'i',
+                [$dbuleg_id],
+                $count
+            );
+            $success = _exec(
+                "DELETE FROM shalguurdeds WHERE shalguur_id=?",
+                'i',
+                [$dbuleg_id],
+                $count
+            );
+            $_SESSION['action'] = "Шалгуур устгагдлаа!";
+        } catch (Exception $e) {
+            $_SESSION['errors'] = ["Системийн алдаа гарлаа. Та дараа дахин оролдоно уу"];
+            // echo "Алдаа: " . $e->getMessage() . ' : ' . $e->getFile() . ' : ' . $e->getLine() . ' : Code ' . $e->getCode();
+        } finally {
+            if (isset($e)) {
+                logError($e);
+            }
         }
-    }*/
+    }
     redirect("/shalguurlist");
 } else if (isset($_POST['studentshilj'])) {
 
@@ -531,24 +541,23 @@ if (isset($_POST['schooladd'])) {
     $angi_sh = post('angi_sh', 300);
     $tailbar = post('tailbar', 300);
     try {
-        
+
         $success = _exec(
             "INSERT INTO shilj(school_id, angi, hezee, tailbar, user_type, user_id, student_id, jil) VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
             'issssiis',
             [$schoolid, $angi_sh, ognooday(), $tailbar, $_SESSION['user_role'], $_SESSION['user_id'], $id, $_SESSION['jil']],
             $count
         );
-        
+
         $success = _exec(
             "UPDATE students SET school_id=?, angi_id = ?, tuluv=? WHERE id=?",
             'iiii',
-            ["0", "0", "1" , $id],
+            ["0", "0", "1", $id],
             $count
         );
         $_SESSION['messages'] = ["Амжилттай шилжилт хийгдлээ."];
-       
     } catch (Exception $e) {
-         //echo "Алдаа: " . $e->getMessage() . ' : ' . $e->getFile() . ' : ' . $e->getLine() . ' : Code ' . $e->getCode();
+        //echo "Алдаа: " . $e->getMessage() . ' : ' . $e->getFile() . ' : ' . $e->getLine() . ' : Code ' . $e->getCode();
     } finally {
         if (isset($e)) {
             logError($e);
@@ -558,7 +567,7 @@ if (isset($_POST['schooladd'])) {
 } else if (isset($_POST['asranadd'])) {
 
     $ard = post('asid', 20);
-    
+
     $as_ovog = post('as_ovog', 300);
     $as_ner = post('as_ner', 300);
     $as_bol = post('as_bol', 300);
@@ -567,7 +576,7 @@ if (isset($_POST['schooladd'])) {
     $as_sohe = post('as_sohe', 300);
     $as_mun = post('as_mun', 300);
     $as_utas = post('as_utas', 300);
-    
+
     $as_eovog = post('as_eovog', 300);
     $as_ener = post('as_ener', 300);
     $as_ebol = post('as_ebol', 300);
@@ -583,7 +592,7 @@ if (isset($_POST['schooladd'])) {
             [$ard],
             $count
         );
-        
+
         $success = _exec(
             "INSERT INTO asran(student_id, ovog, ner, bolovsrol, ajil, hbe, sohe, mun, utas, eovog, ener, ebolovsrol, eajil, ehbe, esohe, emun, eutas) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
             'issssssssssssssss',
@@ -591,9 +600,8 @@ if (isset($_POST['schooladd'])) {
             $count
         );
         $_SESSION['messages'] = ["Амжилттай бүртгэгдлээ."];
-       
     } catch (Exception $e) {
-         //echo "Алдаа: " . $e->getMessage() . ' : ' . $e->getFile() . ' : ' . $e->getLine() . ' : Code ' . $e->getCode();
+        //echo "Алдаа: " . $e->getMessage() . ' : ' . $e->getFile() . ' : ' . $e->getLine() . ' : Code ' . $e->getCode();
     } finally {
         if (isset($e)) {
             logError($e);
@@ -604,16 +612,15 @@ if (isset($_POST['schooladd'])) {
 
     $id = post('sh_sid', 300);
     try {
-            $success = _exec(
+        $success = _exec(
             "UPDATE students SET tuluv=? WHERE id=?",
             'ii',
-            ["0" , $id],
+            ["0", $id],
             $count
         );
         $_SESSION['messages'] = ["Амжилттай хасалт хийгдлээ."];
-       
     } catch (Exception $e) {
-         //echo "Алдаа: " . $e->getMessage() . ' : ' . $e->getFile() . ' : ' . $e->getLine() . ' : Code ' . $e->getCode();
+        //echo "Алдаа: " . $e->getMessage() . ' : ' . $e->getFile() . ' : ' . $e->getLine() . ' : Code ' . $e->getCode();
     } finally {
         if (isset($e)) {
             logError($e);
